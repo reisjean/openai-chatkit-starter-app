@@ -1,17 +1,16 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
-import { ChatKit, useChatKit } from "@openai/chatkit-react";
-import {
-  STARTER_PROMPTS,
-  PLACEHOLDER_INPUT,
-  GREETING,
-  CREATE_SESSION_ENDPOINT,
-  WORKFLOW_ID,
-  getThemeConfig,
-} from "@/lib/config";
-import { ErrorOverlay } from "./ErrorOverlay";
 import type { ColorScheme } from "@/hooks/useColorScheme";
+import {
+  CREATE_SESSION_ENDPOINT,
+  PLACEHOLDER_INPUT,
+  STARTER_PROMPTS,
+  WORKFLOW_ID,
+  getThemeConfig
+} from "@/lib/config";
+import { ChatKit, useChatKit } from "@openai/chatkit-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { ErrorOverlay } from "./ErrorOverlay";
 
 export type FactAction = {
   type: "save";
@@ -268,7 +267,7 @@ export function ChatKitPanel({
       ...getThemeConfig(theme),
     },
     startScreen: {
-      greeting: GREETING,
+      greeting: 'Olá! Sou a Lyv.ia',
       prompts: STARTER_PROMPTS,
     },
     composer: {

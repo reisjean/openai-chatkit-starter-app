@@ -7,13 +7,13 @@ export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
-    label: "What can you do?",
-    prompt: "What can you do?",
+    label: "Quero criar meu agente de atendimento.",
+    prompt: "Vamos criar um agente de atendimento.",
     icon: "circle-question",
   },
 ];
 
-export const PLACEHOLDER_INPUT = "Ask anything...";
+export const PLACEHOLDER_INPUT = "Fale com a Lyv.ia";
 
 export const GREETING = "How can I help you today?";
 
